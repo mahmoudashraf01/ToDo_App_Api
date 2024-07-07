@@ -39,9 +39,12 @@ class _AddToDoState extends State<AddToDo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const CustomIcon(
+        leading: CustomIcon(
           icon: Icons.arrow_back,
           color: white,
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Text(
           isEdited ? "Edit To Do" : "Add To Do",
@@ -65,7 +68,6 @@ class _AddToDoState extends State<AddToDo> {
             style: title1Bold,
             controller: descriptionController,
             decoration: InputDecoration(
-              
               hintText: "Description",
               hintStyle: title1Bold.merge(
                 const TextStyle(color: grey2),
@@ -113,12 +115,13 @@ class _AddToDoState extends State<AddToDo> {
     //show succes data
     response.statusCode == 201
         ? {
-            ShowMessage.showSuccessMessage(context,message:"Creation Success"),
+            ShowMessage.showSuccessMessage(context,
+                message: "Creation Success"),
             titleController.text = '',
             descriptionController.text = '',
             goToWithNoBackButton(context: context, screen: const ToDoList()),
           }
-        : ShowMessage.showFailedMessage(context,message:"Creation Failed");
+        : ShowMessage.showFailedMessage(context, message: "Creation Failed");
   }
 
   Future<void> updateDate() async {
@@ -143,11 +146,11 @@ class _AddToDoState extends State<AddToDo> {
     //show succes data
     response.statusCode == 200
         ? {
-            ShowMessage.showSuccessMessage(context,message:"Update Success"),
+            ShowMessage.showSuccessMessage(context, message: "Update Success"),
             titleController.text = '',
             descriptionController.text = '',
             goToWithNoBackButton(context: context, screen: const ToDoList()),
           }
-        : ShowMessage.showFailedMessage(context,message:"Update Failed");
+        : ShowMessage.showFailedMessage(context, message: "Update Failed");
   }
 }

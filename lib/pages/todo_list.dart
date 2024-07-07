@@ -28,7 +28,7 @@ class _ToDoListState extends State<ToDoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const CustomIcon(
+        leading: HomeButton(
           icon: Icons.home,
           color: white,
         ),
