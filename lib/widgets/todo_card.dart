@@ -1,5 +1,6 @@
+import 'package:ToDo/themes/text.dart';
 import 'package:flutter/material.dart';
-import 'package:to_do_api/themes/text.dart';
+
 
 class ToDoCard extends StatelessWidget {
   const ToDoCard({
