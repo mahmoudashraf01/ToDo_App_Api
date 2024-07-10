@@ -8,7 +8,6 @@ import 'package:ToDo/widgets/custom_icon.dart';
 import 'package:ToDo/widgets/todo_card.dart';
 import 'package:flutter/material.dart';
 
-
 class ToDoList extends StatefulWidget {
   const ToDoList({super.key});
 
@@ -34,12 +33,10 @@ class _ToDoListState extends State<ToDoList> {
           color: white,
         ),
         backgroundColor: purple2,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 80),
-          child: Text(
-            "To Do List",
-            style: h5Bold,
-          ),
+        title: Text(
+          "To Do List",
+          style: h5Bold,
+          textAlign: TextAlign.end,
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
