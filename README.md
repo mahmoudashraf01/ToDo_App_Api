@@ -15,7 +15,7 @@ A new Flutter project.
 <br><br>
 
 <div>
-  <h3>Added Todo View</h3>
+  <h3>Add Todo</h3>
   <img src="https://github.com/user-attachments/assets/12ca6230-dd9e-4dee-9a1c-7abeabf99848" alt="Add Note">  
 </div>
 <br><br>
